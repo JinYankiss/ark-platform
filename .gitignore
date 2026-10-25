@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.research/
+.data/
+.env
+.env.*
+!.env.example

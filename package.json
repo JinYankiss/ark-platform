@@ -1,0 +1,33 @@
+{
+  "name": "ark-platform",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "企业内部 AI Agent 平台：飞书接入 -> Ark 调度中心 -> Direct / Workflow / Draft -> Runner(Codex SDK)",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "start": "node dist/src/index.js server",
+    "seed": "node dist/src/index.js seed",
+    "runner": "node dist/src/index.js runner",
+    "demo": "node dist/src/index.js runner --demo",
+    "check": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@larksuiteoapi/node-sdk": "1.76.0",
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "@openai/codex-sdk": "0.164.0",
+    "@opentelemetry/api": "1.9.0",
+    "@opentelemetry/exporter-trace-otlp-http": "0.219.0",
+    "@opentelemetry/sdk-trace-node": "2.8.0",
+    "ajv": "8.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
